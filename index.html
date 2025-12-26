@@ -1,776 +1,204 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clases de DJ profesionales con instructores certificados. Aprende técnicas de mezcla, producción musical y domina equipos profesionales. Clases presenciales y online.">
-    <meta name="keywords" content="clases de dj, escuela dj, curso dj, aprender dj, mezcla musical, producción musical, dj profesional">
-    <meta name="author" content="DJ Academy Pro">
-    
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="Academia DJ Pro - Clases Profesionales de DJ">
-    <meta property="og:description" content="Conviértete en DJ profesional. Clases personalizadas con equipos de última generación.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tudominio.com">
-    
-    <!-- Google Ads Conversion Tracking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-XXXXXXXXX');
-    </script>
-    
-    <!-- Schema.org markup para SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "DJ Academy Pro",
-        "description": "Escuela profesional de DJs con instructores certificados",
-        "url": "https://tudominio.com",
-        "telephone": "+54-11-XXXX-XXXX",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "AR"
-        },
-        "offers": {
-            "@type": "Offer",
-            "category": "Cursos de DJ"
-        }
-    }
-    </script>
-    
-    <title>DJ Academy Pro | Clases Profesionales de DJ en Argentina</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #ff0066;
-            --secondary: #8b00ff;
-            --dark: #0a0a0a;
-            --light: #ffffff;
-            --gray: #1a1a1a;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--dark);
-            color: var(--light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        /* Header */
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 0, 102, 0.3);
-        }
-        
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .cta-btn {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 0, 102, 0.4);
-        }
-        
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255, 0, 102, 0.2), transparent);
-            border-radius: 50%;
-            top: -200px;
-            right: -200px;
-            animation: pulse 8s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.2); opacity: 0.8; }
-        }
-        
-        .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-text h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero-text p {
-            font-size: 1.3rem;
-            color: #b0b0b0;
-            margin-bottom: 2.5rem;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-        }
-        
-        .btn-primary, .btn-secondary {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 0, 102, 0.5);
-        }
-        
-        .btn-secondary {
-            border: 2px solid var(--primary);
-            color: var(--light);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-        
-        .hero-image {
-            position: relative;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(255, 0, 102, 0.3);
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            background: var(--gray);
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: #b0b0b0;
-            font-size: 1.2rem;
-            margin-bottom: 4rem;
-        }
-        
-        .features-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-        
-        .feature-card {
-            background: var(--dark);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 102, 0.1);
-            transition: all 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(255, 0, 102, 0.2);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .feature-card p {
-            color: #b0b0b0;
-        }
-        
-        /* Tips Section */
-        .tips {
-            padding: 6rem 2rem;
-            background: var(--dark);
-        }
-        
-        .tips-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .tips-grid {
-            display: grid;
-            gap: 2rem;
-        }
-        
-        .tip-card {
-            background: var(--gray);
-            padding: 2.5rem;
-            border-radius: 15px;
-            border-left: 4px solid var(--primary);
-            transition: all 0.3s;
-        }
-        
-        .tip-card:hover {
-            transform: translateX(10px);
-            box-shadow: -5px 0 20px rgba(255, 0, 102, 0.3);
-        }
-        
-        .tip-number {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-        
-        .tip-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tip-card p {
-            color: #b0b0b0;
-            line-height: 1.8;
-        }
-        
-        /* Courses Section */
-        .courses {
-            padding: 6rem 2rem;
-            background: var(--gray);
-        }
-        
-        .courses-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-        
-        .course-card {
-            background: var(--dark);
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 0, 102, 0.1);
-            transition: all 0.3s;
-        }
-        
-        .course-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(255, 0, 102, 0.3);
-        }
-        
-        .course-image {
-            height: 250px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-        }
-        
-        .course-content {
-            padding: 2.5rem;
-        }
-        
-        .course-level {
-            display: inline-block;
-            background: rgba(255, 0, 102, 0.2);
-            color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        
-        .course-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-        
-        .course-card p {
-            color: #b0b0b0;
-            margin-bottom: 2rem;
-        }
-        
-        .course-features {
-            list-style: none;
-            margin-bottom: 2rem;
-        }
-        
-        .course-features li {
-            padding: 0.5rem 0;
-            color: #b0b0b0;
-        }
-        
-        .course-features li::before {
-            content: "✓ ";
-            color: var(--primary);
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-        
-        .course-price {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-weight: bold;
-        }
-        
-        /* Contact Form */
-        .contact {
-            padding: 6rem 2rem;
-            background: var(--dark);
-        }
-        
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .contact-form {
-            background: var(--gray);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 102, 0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 2rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--light);
-            font-weight: 500;
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border-radius: 10px;
-            border: 1px solid rgba(255, 0, 102, 0.2);
-            background: var(--dark);
-            color: var(--light);
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            padding: 1.2rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 0, 102, 0.5);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--gray);
-            padding: 3rem 2rem 1rem;
-            text-align: center;
-            border-top: 1px solid rgba(255, 0, 102, 0.1);
-        }
-        
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-links a {
-            color: #b0b0b0;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .social-links a {
-            color: var(--light);
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--primary);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .courses-grid,
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO ORGÁNICO LIMPIO -->
+<title>Habzel H | Biografía y Videos Musicales</title>
+<meta name="description" content="Página informativa sobre Habzel H: biografía, estilo musical y una selección de videos de YouTube. Contenido editorial sin fines comerciales.">
+<meta name="keywords" content="Habzel H, Habzel H biografía, Habzel H música, Habzel H videos, artista urbano">
+<meta name="robots" content="index, follow">
+
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- FUENTE -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- SCHEMA EDITORIAL -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Habzel H",
+  "description": "Artista musical urbano. Página informativa con biografía y material audiovisual.",
+  "sameAs": ["https://www.youtube.com"]
+}
+</script>
+
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0e0e0e;
+  color:#f2f2f2;
+}
+header{
+  background:url("https://images.unsplash.com/photo-1511379938547-c1f69419868d") center/cover no-repeat;
+  padding:80px 20px;
+  text-align:center;
+  position:relative;
+}
+header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.65);
+}
+header *{position:relative;}
+header h1{font-size:3em;margin:0;}
+header p{color:#ddd;margin-top:10px;}
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+h2{
+  border-left:5px solid #1db954;
+  padding-left:12px;
+  margin-bottom:25px;
+}
+
+.bio{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+.bio img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.6);
+}
+.bio p{
+  line-height:1.9;
+  color:#ddd;
+}
+
+.videos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+.video-card{
+  background:#161616;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+.video-card iframe{
+  width:100%;
+  height:200px;
+}
+.video-card a{
+  display:block;
+  padding:12px;
+  color:#1db954;
+  text-decoration:none;
+  font-size:.95em;
+}
+
+.icons{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
+.icon-box{
+  flex:1 1 220px;
+  background:#161616;
+  padding:25px;
+  border-radius:14px;
+}
+.icon-box i{
+  font-size:2em;
+  color:#1db954;
+}
+.icon-box h3{
+  margin-top:10px;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:.85em;
+  color:#888;
+}
+</style>
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">DJ ACADEMY PRO</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#tips">Tips</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <a href="#contacto" class="cta-btn">Consultar Ahora</a>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Convertite en el <span class="gradient-text">DJ Profesional</span> que siempre soñaste</h1>
-                <p>Clases personalizadas con equipos de última generación. Instructores certificados con años de experiencia en la industria musical.</p>
-                <div class="hero-buttons">
-                    <a href="#contacto" class="btn-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXX'});">Comenzar Ahora</a>
-                    <a href="#cursos" class="btn-secondary">Ver Cursos</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=800" alt="DJ profesional en acción">
-            </div>
-        </div>
-    </section>
+<header>
+  <h1>Habzel H</h1>
+  <p>Biografía, música y videos informativos</p>
+</header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2 class="section-title">¿Por qué elegirnos?</h2>
-        <p class="section-subtitle">Experiencia profesional que te prepara para el mundo real</p>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🎧</div>
-                <h3>Equipos Profesionales</h3>
-                <p>Trabajá con controladoras Pioneer DJ, mezcladores Allen & Heath, y software Rekordbox, Serato y Traktor Pro.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👨‍🏫</div>
-                <h3>Instructores Certificados</h3>
-                <p>Aprendé de DJs activos en la escena con años de experiencia en clubs, festivales y eventos corporativos.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📚</div>
-                <h3>Programa Completo</h3>
-                <p>Desde los fundamentos hasta técnicas avanzadas de mezcla, scratching, producción y marketing personal.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎵</div>
-                <h3>Todos los Géneros</h3>
-                <p>House, Techno, Reggaeton, Hip Hop, Trance, EDM y más. Especializate en tu estilo favorito.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏆</div>
-                <h3>Certificación Oficial</h3>
-                <p>Obtené tu certificado reconocido que avala tus conocimientos y habilidades como DJ profesional.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🌐</div>
-                <h3>Clases Online/Presencial</h3>
-                <p>Elegí la modalidad que mejor se adapte a vos. Mismo contenido, máxima flexibilidad.</p>
-            </div>
-        </div>
-    </section>
+<section>
+  <h2>Biografía</h2>
+  <div class="bio">
+    <p>
+      Habzel H es un artista musical urbano reconocido por su estilo auténtico y
+      su conexión con el público a través de letras personales y ritmos actuales.
+      Su propuesta artística combina influencias modernas con una identidad propia,
+      consolidándose dentro de la escena musical contemporánea.
+    </p>
+    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f"
+         alt="Habzel H artista urbano - fotografía representativa"
+         loading="lazy">
+  </div>
+</section>
 
-    <!-- Tips Section -->
-    <section id="tips" class="tips">
-        <h2 class="section-title">Tips Profesionales para DJs</h2>
-        <p class="section-subtitle">Consejos de nuestros instructores para acelerar tu aprendizaje</p>
-        <div class="tips-container">
-            <div class="tips-grid">
-                <div class="tip-card">
-                    <span class="tip-number">1</span>
-                    <h3>Conocé tu música a fondo</h3>
-                    <p>Antes de mezclar, escuchá cada track completo al menos 3 veces. Identificá los breakdowns, drops, y momentos clave. Anotá los BPMs y la estructura de cada canción. Un DJ profesional conoce su biblioteca musical como la palma de su mano.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-number">2</span>
-                    <h3>Practicá con audífonos de calidad</h3>
-                    <p>Invertí en audífonos profesionales cerrados que aíslen el sonido externo. Los modelos como Sennheiser HD 25 o Audio-Technica ATH-M50x son estándares de la industria. La calidad del monitoreo es crucial para mezclas precisas.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-number">3</span>
-                    <h3>Dominá el beatmatching manual</h3>
-                    <p>Aunque el sync automático es útil, aprender beatmatching manual te da control total y te prepara para cualquier situación. Practicá 30 minutos diarios sin sync hasta que sea natural.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-number">4</span>
-                    <h3>Organizá tu biblioteca musical</h3>
-                    <p>Usá tags, playlists y crates organizados por género, energía y BPM. Una biblioteca bien organizada te permite encontrar el track perfecto en segundos durante un set en vivo.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-number">5</span>
-                    <h3>Grabá y analizá tus sesiones</h3>
-                    <p>Grabá cada práctica y escuchala críticamente al día siguiente. Identificá errores en las transiciones, niveles de volumen, y flujo general. La autoevaluación es clave para mejorar rápidamente.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-number">6</span>
-                    <h3>Estudiá otros DJs profesionales</h3>
-                    <p>Mirá sets en YouTube de DJs que admirás. Analizá sus técnicas de mezcla, selección musical y cómo construyen la energía. Aprendé de los mejores para convertirte en uno de ellos.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-number">7</span>
-                    <h3>Aprendé teoría musical básica</h3>
-                    <p>Entender tonalidades, escalas armónicas y estructura musical te permitirá crear mezclas más profesionales y emocionales. Usá la rueda de Camelot para mixing armónico.</p>
-                </div>
-                <div class="tip-card">
-                    <span class="tip-number">8</span>
-                    <h3>Desarrollá tu marca personal</h3>
-                    <p>Creá perfiles en redes sociales, diseñá un logo profesional, y compartí mixes regularmente en SoundCloud y Mixcloud. Tu presencia online es tan importante como tu habilidad técnica.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section>
+  <h2>Videos en YouTube</h2>
+  <div class="videos">
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/VIDEOID1"
+        loading="lazy"
+        frameborder="0"
+        allowfullscreen></iframe>
+      <a href="https://youtu.be/VIDEOID1" target="_blank">
+        Ver video en YouTube
+      </a>
+    </div>
 
-    <!-- Courses Section -->
-    <section id="cursos" class="courses">
-        <h2 class="section-title">Nuestros Cursos</h2>
-        <p class="section-subtitle">Elegí el programa perfecto para tu nivel</p>
-        <div class="courses-grid">
-            <div class="course-card">
-                <div class="course-image">🎚️</div>
-                <div class="course-content">
-                    <span class="course-level">PRINCIPIANTE</span>
-                    <h3>DJ Fundamentos</h3>
-                    <p>Curso completo para quienes empiezan desde cero. Aprendé las bases de la mezcla y el uso de controladoras.</p>
-                    <ul class="course-features">
-                        <li>12 clases de 2 horas</li>
-                        <li>Introducción a equipos DJ</li>
-                        <li>Beatmatching y sincronización</li>
-                        <li>Uso de software (Rekordbox/Serato)</li>
-                        <li>EQ y filtros básicos</li>
-                        <li>Estructura de canciones</li>
-                    </ul>
-                    <div class="course-price">$89.000</div>
-                    <a href="#contacto" class="btn-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXX'});">Inscribirme</a>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-image">🔊</div>
-                <div class="course-content">
-                    <span class="course-level">INTERMEDIO</span>
-                    <h3>DJ Avanzado</h3>
-                    <p>Perfeccioná tu técnica y llevá tus mezclas al siguiente nivel con técnicas profesionales.</p>
-                    <ul class="course-features">
-                        <li>16 clases de 2 horas</li>
-                        <li>Mixing armónico avanzado</li>
-                        <li>Técnicas de scratching</li>
-                        <li>Uso de efectos y samples</li>
-                        <li>Lectura del público</li>
-                        <li>Producción y edits</li>
-                    </ul>
-                    <div class="course-price">$129.000</div>
-                    <a href="#contacto" class="btn-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXX'});">Inscribirme</a>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-image">🎤</div>
-                <div class="course-content">
-                    <span class="course-level">PROFESIONAL</span>
-                    <h3>DJ Master Class</h3>
-                    <p>Programa completo para convertirte en DJ profesional y vivir de tu pasión por la música.</p>
-                    <ul class="course-features">
-                        <li>24 clases de 2 horas</li>
-                        <li>Todo lo anterior +</li>
-                        <li>Producción musical completa</li>
-                        <li>Marketing y branding personal</li>
-                        <li>Gestión de eventos y bookings</li>
-                        <li>Networking en la industria</li>
-                        <li>Prácticas en eventos reales</li>
-                    </ul>
-                    <div class="course-price">$189.000</div>
-                    <a href="#contacto" class="btn-primary" onclick="gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXX'});">Inscribirme</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="video-card">
+      <iframe src="https://www.youtube.com/embed/VIDEOID2"
+        loading="lazy"
+        frameborder="0"
+        allowfullscreen></iframe>
+      <a href="https://youtu.be/VIDEOID2" target="_blank">
+        Ver video en YouTube
+      </a>
+    </div>
+  </div>
+</section>
+<section>
+  <h2>Contenido</h2>
+  <div class="icons">
+    <div class="icon-box">
+      <i class="bi bi-music-note-beamed"></i>
+      <h3>Estilo musical</h3>
+      <p>Sonidos urbanos con identidad propia.</p>
+    </div>
+    <div class="icon-box">
+      <i class="bi bi-camera-video"></i>
+      <h3>Producciones audiovisuales</h3>
+      <p>Videoclips y material visual.</p>
+    </div>
+    <div class="icon-box">
+      <i class="bi bi-people"></i>
+      <h3>Audiencia</h3>
+      <p>Seguidores de música contemporánea.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Form -->
-    <section id="contacto" class="contact">
-        <h2 class="section-title">Comenzá Tu Carrera de DJ Hoy</h2>
-        <p class="section-subtitle">Completá el formulario y nos contactamos en menos de 24 horas</p>
-        <div class="contact-container">
-            <form class="contact-form" onsubmit="return handleSubmit(event)">
-                <div class="form-group">
-                    <label for="nombre">Nombre Completo *</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono / WhatsApp *</label>
-                    <input type="tel" id="telefono" name="telefono" required>
-                </div>
-                <div class="form-group">
-                    <label for="curso">Curso de Interés *</label>
-                    <select id="curso" name="curso" required>
-                        <option value="">Seleccioná un curso</option>
-                        <option value="fundamentos">DJ Fundamentos - Principiante</option>
-                        <option value="avanzado">
+<footer>
+  Página informativa y editorial. No se realizan ventas ni promociones.
+</footer>
+
+</body>
+</html>
